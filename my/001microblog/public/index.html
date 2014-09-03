@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>亲爱的老爸老妈</title>
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	/*src: url('digital-7_mono.ttf') format("truetype");*/
+}
+</style>
+<link href="stylesheets/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="javascripts/jquery.js"></script>
+<script type="text/javascript" src="javascripts/garden.js"></script>
+<script type="text/javascript" src="javascripts/functions.js"></script>
+</head>
+<body>
+<audio src="sounds/shijiandouqunaerle.ogg" autoplay="true">
+    Your browser does not support the audio element.
+</audio>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*1990—10-03,</span><br />
+			<span class="space"/><span class="comments">*2014-05-14.</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Boy name = <span class="keyword">Ma</span> Jie 马杰<br />
+            Girl name = <span class="keyword">Ma</span> Hui 马慧<br />
+            <span class="keyword">亲爱的</span> 老爸老妈：<br /><br />
+			<span class="comments">// Love you forever. 我们永远爱你们！ </span><br /><br />
+            我的好妈妈，<br />
+
+            女人都是爱美的，<br />
+
+            亲爱的妈妈也是一样的。<br />
+
+            妈妈的青春都给了我们，<br />
+
+            没有过时髦的衣服，<br />
+
+            更没有什么化妆品，<br />
+
+            但是，我知道妈妈有一颗年轻的心。<br />
+
+            明明喜欢却装作无所谓，<br />
+
+            明明想去跳舞，嘴上说的却是风轻云淡……<br /><br />
+
+
+            还记得我以前不让妈妈带铜打的戒指吗？<br />
+
+            我说过，以后要给妈妈买金子的，<br />
+
+            虽然我现在还没有能力，<br />
+
+            但我会记得我的承诺，<br />
+
+            一定给老妈一个惊喜！<br />
+
+            <span class="comments">**/</span><br />
+
+            <span class="keyword">/***************************************************/</span><br />
+            我的好爸爸，<br />
+
+            当我坐在爸爸的摩托车上的时候，<br />
+
+            静静的看着满头的黑发渐渐变白，<br />
+
+            我在心里默默的说：<br />
+
+            辛苦了，老爸！<br />
+
+            我理解爸爸所经历的痛苦，<br />
+
+            也理解作为男人的那份自尊和骄傲，<br />
+
+            每每看到醉酒后酸楚的老爸，<br />
+
+            更多的是心疼。<br /><br />
+
+
+            不管遇到什么，<br />
+
+            亲爱的老爸，你要记得：<br />
+
+            你还有我们，<br />
+            我们是你最坚实的后盾！<br /><br />
+
+            <span class="keyword">我们一定会成为你们的骄傲！</span><br /><br /><br /><br />
+
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的爸妈，这是我们在一起的幸福时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					爱你们直到永永远远。<br/>
+					<div class="signature">- 慧慧</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(1990, 10, 03);
+together.setHours(22);
+together.setMinutes(21);
+together.setSeconds(0);
+together.setMilliseconds(0);
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 5000);
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<div style="text-align:center;clear:both"></div>
+</body>
+</html>

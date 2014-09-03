@@ -1,0 +1,9 @@
+{
+  "name":"mychat",
+  "version":"0.0.1",
+  "description":"简单的聊天室程序",
+  "dependencies":{
+    "socket.io":"*",
+    "mime":"*"
+  }
+}
